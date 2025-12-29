@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Literasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Petualangan Literasi 🌟</h1>
+            <p>Asah Kemampuan Membaca, Menulis, Menyimak, dan Berbicara dengan Cara Menyenangkan!</p>
+        </div>
+
+        <div id="mainMenu" class="game-menu">
+            <div class="game-card" onclick="startGame('reading')">
+                <span class="game-icon">📖</span>
+                <h3>Membaca Cerdas</h3>
+                <p>Uji kemampuan pemahamanmu dalam membaca cerita dan menjawab pertanyaan!</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('writing')">
+                <span class="game-icon">✍️</span>
+                <h3>Menulis Kreatif</h3>
+                <p>Tunjukkan kreativitasmu dalam menulis cerita berdasarkan tema yang diberikan!</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('listening')">
+                <span class="game-icon">👂</span>
+                <h3>Menyimak Aktif</h3>
+                <p>Dengarkan cerita dengan seksama dan jawab pertanyaan dengan tepat!</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('speaking')">
+                <span class="game-icon">🎤</span>
+                <h3>Berbicara Percaya Diri</h3>
+                <p>Latih kemampuan berbicaramu dengan membaca teks dengan lantang!</p>
+            </div>
+        </div>
+
+        <!-- Reading Game -->
+        <div id="readingGame" class="game-screen">
+            <button class="back-btn" onclick="backToMenu()">⬅️ Kembali</button>
+            <h2>📖 Membaca Cerdas</h2>
+            <div class="score-board">
+                <div class="score-item">
+                    <h4>Pertanyaan</h4>
+                    <div class="value"><span id="readingQuestion">1</span>/5</div>
+                </div>
+                <div class="score-item">
+                    <h4>Skor</h4>
+                    <div class="value" id="readingScore">0</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="readingProgress" style="width: 20%">20%</div>
+            </div>
+            <div id="readingContent"></div>
+        </div>
+
+        <!-- Writing Game -->
+        <div id="writingGame" class="game-screen">
+            <button class="back-btn" onclick="backToMenu()">⬅️ Kembali</button>
+            <h2>✍️ Menulis Kreatif</h2>
+            <div class="score-board">
+                <div class="score-item">
+                    <h4>Tugas</h4>
+                    <div class="value"><span id="writingTask">1</span>/3</div>
+                </div>
+                <div class="score-item">
+                    <h4>Kata Ditulis</h4>
+                    <div class="value" id="wordCount">0</div>
+                </div>
+            </div>
+            <div id="writingContent"></div>
+        </div>
+
+        <!-- Listening Game -->
+        <div id="listeningGame" class="game-screen">
+            <button class="back-btn" onclick="backToMenu()">⬅️ Kembali</button>
+            <h2>👂 Menyimak Aktif</h2>
+            <div class="score-board">
+                <div class="score-item">
+                    <h4>Pertanyaan</h4>
+                    <div class="value"><span id="listeningQuestion">1</span>/4</div>
+                </div>
+                <div class="score-item">
+                    <h4>Skor</h4>
+                    <div class="value" id="listeningScore">0</div>
+                </div>
+            </div>
+            <div id="listeningContent"></div>
+        </div>
+
+        <!-- Speaking Game -->
+        <div id="speakingGame" class="game-screen">
+            <button class="back-btn" onclick="backToMenu()">⬅️ Kembali</button>
+            <h2>🎤 Berbicara Percaya Diri</h2>
+            <div class="score-board">
+                <div class="score-item">
+                    <h4>Teks</h4>
+                    <div class="value"><span id="speakingTask">1</span>/4</div>
+                </div>
+                <div class="score-item">
+                    <h4>Selesai</h4>
+                    <div class="value" id="speakingComplete">0</div>
+                </div>
+            </div>
+            <div id="speakingContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
